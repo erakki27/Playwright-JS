@@ -21,6 +21,7 @@ exports.ProductPage = class ProductPage{
 
     async clickOnAddToCartNewTab(){
         await this.page.locator('#add-to-cart-button').click();
+        this.page.close();
         
     }
 

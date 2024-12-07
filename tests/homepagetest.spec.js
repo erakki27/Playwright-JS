@@ -18,9 +18,8 @@ test('Homepage Test', async ({ page }) => {
   await expect(page).toHaveTitle('Amazon.in : Watches');
   const newTab = await productpage.clickOnProducAndAddToCart();
   await newTab.clickOnAddToCartNewTab();
-
- 
-
+  await homepage.searchProduct('iphone');
+  await homepage.clickOnSearch();
 
 });
 });
