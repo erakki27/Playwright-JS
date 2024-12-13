@@ -1,25 +1,25 @@
 const { test, expect } = require('@playwright/test');
-import { HomePage } from '../pages/HomePage.page';
-import { ProductPage } from '../pages/ProductsPage.page';
+import {POManager} from '../pages/POManager.page';
 
 test.describe('Automation', () => { 
 test('Homepage Test', async ({ page }) => {
-    const homepage = new HomePage(page);
-    const productpage =  new ProductPage(page);
-    await homepage.launchHomepage();
+  const poManager = new POManager(page);
+  const HomePage = poManager.getHomePage();
+  const productpage = poManager.getProductPage();
+    await HomePage.launchHomepage();
     
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle('Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in');
-  await homepage.searchProduct('Watches');
-  await homepage.clickOnSearch();
+  await HomePage.searchProduct('Watches');
+  await HomePage.clickOnSearch();
 
   // Check title
   await expect(page).toHaveTitle('Amazon.in : Watches');
   const newTab = await productpage.clickOnProducAndAddToCart();
   await newTab.clickOnAddToCartNewTab();
-  await homepage.searchProduct('iphone');
-  await homepage.clickOnSearch();
+  await HomePage.searchProduct('iphone');
+  await HomePage.clickOnSearch();
 
 });
 });

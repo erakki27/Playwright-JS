@@ -18,4 +18,8 @@ exports.HomePage = class HomePage {
         await this.page.locator('#nav-search-submit-button').click();
     }
 
+    async clickOnViewOrder(){
+        await this.page.locator('#nav-orders').click();
+    }
+
 }
