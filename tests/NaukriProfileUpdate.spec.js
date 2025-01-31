@@ -1,9 +1,7 @@
 const { test, expect } = require('@playwright/test');
 import {POManager} from '../pages/POManager.page';
 
-
 test.describe('Naukri Profile Update Automation', () => {
-
     test('Update',  async({ page }) =>{
 
         const poManager = new POManager(page);

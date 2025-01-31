@@ -5,6 +5,7 @@
   "scripts": {
     "regression": "npx playwright test",
     "Naukri" : "npx playwright test NaukriProfileUpdate.spec.js",
+    "Linkedin" : "npx playwright test LinkedinProfileUpdate.spec.js",
     "cucumber" : "npx cucumber-js --exit --format html:cucumber-report.html "
   },
   "keywords": [],

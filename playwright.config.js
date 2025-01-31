@@ -27,7 +27,8 @@ module.exports = defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
-
+    ignoreHTTPSErrors: true,
+    headless: false,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
@@ -40,11 +41,11 @@ module.exports = defineConfig({
         screenshot : 'on'
       },
     },
-    {
+    /*{
       name: 'webkit',
       use: { ...devices['Desktop Safari'],
         screenshot : 'on' },
-    },
+    },*
 
     /* Test against mobile viewports. */
     // {
@@ -68,10 +69,10 @@ module.exports = defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://127.0.0.1:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
+   //webServer: {
+     //command: 'npm run start',
+     //url: 'http://127.0.0.1:3000',
+     //reuseExistingServer: !process.env.CI,
+   //},
 });
 
