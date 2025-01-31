@@ -7,6 +7,7 @@ test('Homepage Test', async ({ page }) => {
   const HomePage = poManager.getHomePage();
   const productpage = poManager.getProductPage();
     await HomePage.launchHomepage();
+    await HomePage.navgationbarheader();
     
 
   // Expect a title "to contain" a substring.

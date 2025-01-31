@@ -11,6 +11,11 @@ Given('Open Amazon Homepage', {timeout : 100 *1000}, async function () {
     this.poManager = new POManager(this.page);
      this.HomePage = this.poManager.getHomePage();
     await this.HomePage.launchHomepage();
+})
+
+  When('page opens, it should have nagivation bar', async function() {
+
+    await this.HomePage.navgationbarheader();
    
   });
 

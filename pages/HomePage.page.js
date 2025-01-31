@@ -1,3 +1,4 @@
+const {test, expect} = require('@playwright/test');
 exports.HomePage = class HomePage {
 
     constructor(page){
@@ -20,6 +21,10 @@ exports.HomePage = class HomePage {
 
     async clickOnViewOrder(){
         await this.page.locator('#nav-orders').click();
+    }
+
+    async navgationbarheader(){
+        await expect(this.page.locator('#nav-belt')).toBeVisible();
     }
 
 }

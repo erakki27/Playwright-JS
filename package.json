@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "regression": "npx playwright test",
-    "cucumber" : "npx cucumber-js --exit --format html:cucumber-report.html "
+    "Naukri" : "npx playwright test NaukriProfileUpdate.spec.js",
+    "Linkedin" : "npx playwright test LinkedinProfileUpdate.spec.js",
+    "cucumber" : "npx cucumber-js --exit --format html:cucumber-report.html ",
+    "Combine" :"npx playwright test NaukriProfileUpdate.spec.js && npx playwright test LinkedinProfileUpdate.spec.j"
   },
   "keywords": [],
   "author": "",
