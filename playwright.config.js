@@ -30,11 +30,9 @@ module.exports = defineConfig({
     ignoreHTTPSErrors: true,
     bypassCSP: true,
     //headless: true,
-<<<<<<< HEAD
     launchOptions: { args: ['--headless=webkit']},
-=======
     //launchOptions: {args: ['--headless=webkit']},
->>>>>>> 5678e918f72afc9ed919ed94fd75433aedd48072
+
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
@@ -76,10 +74,10 @@ module.exports = defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-   webServer: {
-     command: 'npm run start',
-    url: 'http://127.0.0.1:3000',
-     reuseExistingServer: !process.env.CI,
+   //webServer: {
+    // command: 'npm run start',
+    //url: 'http://127.0.0.1:3000',
+     //reuseExistingServer: !process.env.CI,
    },
 });
 
