@@ -27,13 +27,17 @@ module.exports = defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
-    ignoreHTTPSErrors: true,
-    bypassCSP: true,
+   // ignoreHTTPSErrors: true,
+    //bypassCSP: true,
     //headless: true,
-    //launchOptions: { args: ['--headless=webkit']},
+    launchOptions: { args: ['--headless=webkit']},
     //args: [
      // '--disable-blink-features=AutomationControlled'],
      // ignoreDefaultArgs: ['--disable-component-extensions-with-background-pages'],
+    //launchOptions: { args: ['--headless=webkit']},
+    //args: [
+      //'--disable-blink-features=AutomationControlled'],
+      //ignoreDefaultArgs: ['--disable-component-extensions-with-background-pages'],
     //launchOptions: {args: ['--headless=webkit']},
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
