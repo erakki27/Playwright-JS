@@ -34,7 +34,7 @@ module.exports = defineConfig({
     
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    storageState : 'Config/Login.json'
+    //storageState : 'Config/Login.json'
   },
 
   /* Configure projects for major browsers */
