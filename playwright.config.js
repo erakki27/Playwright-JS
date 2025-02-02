@@ -29,17 +29,9 @@ module.exports = defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
    // ignoreHTTPSErrors: true,
     //bypassCSP: true,
-    //headless: true,
-    launchOptions: { args: ['--headless=webkit']},
-    //args: [
-     // '--disable-blink-features=AutomationControlled'],
-     // ignoreDefaultArgs: ['--disable-component-extensions-with-background-pages'],
-    //launchOptions: { args: ['--headless=webkit']},
-    //args: [
-      //'--disable-blink-features=AutomationControlled'],
-      //ignoreDefaultArgs: ['--disable-component-extensions-with-background-pages'],
-    //launchOptions: {args: ['--headless=webkit']},
-
+    //headless: false,
+    launchOptions: { args: ['--headless=chromium']},
+    
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     storageState : 'Config/Login.json'
