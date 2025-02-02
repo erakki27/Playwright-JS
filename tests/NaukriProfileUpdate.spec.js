@@ -26,11 +26,12 @@ test.describe('Naukri Profile Update Automation', () => {
 
 
     test("Auth Login" , async( {page} ) =>{
+        const poManager = new POManager(page);
+        const naukripage = poManager.getNaukriPage();
         const ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36';
         naukripage.setUserAgent(ua);
 
-        const poManager = new POManager(page);
-        const naukripage = poManager.getNaukriPage();
+       
 
         await naukripage.launchHomepage();
         //await naukripage.ClickOnLoginOption();
