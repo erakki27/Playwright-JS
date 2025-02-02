@@ -34,6 +34,10 @@ module.exports = defineConfig({
     //args: [
      // '--disable-blink-features=AutomationControlled'],
      // ignoreDefaultArgs: ['--disable-component-extensions-with-background-pages'],
+    launchOptions: { args: ['--headless=webkit']},
+    args: [
+      '--disable-blink-features=AutomationControlled'],
+      ignoreDefaultArgs: ['--disable-component-extensions-with-background-pages'],
     //launchOptions: {args: ['--headless=webkit']},
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
