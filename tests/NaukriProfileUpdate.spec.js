@@ -21,7 +21,7 @@ test.describe('Naukri Profile Update Automation', () => {
     })
 
     test.use({
-        storageState : 'auth.json'
+        storageState : 'Config/Login.json'
     });
 
 

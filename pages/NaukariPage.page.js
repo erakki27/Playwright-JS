@@ -8,7 +8,7 @@ exports.NaukariPage = class NaukariPage {
     }
 
     async launchHomepage(){
-        await this.page.goto('https://www.naukri.com/');
+        await this.page.goto('https://www.naukri.com');
     }
 
     async ClickOnLoginOption(){
