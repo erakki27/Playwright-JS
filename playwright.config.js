@@ -30,7 +30,7 @@ module.exports = defineConfig({
    // ignoreHTTPSErrors: true,
     //bypassCSP: true,
     //headless: true,
-    //launchOptions: { args: ['--headless=webkit']},
+    launchOptions: { args: ['--headless=webkit']},
     //args: [
      // '--disable-blink-features=AutomationControlled'],
      // ignoreDefaultArgs: ['--disable-component-extensions-with-background-pages'],
