@@ -24,7 +24,7 @@ test.describe('Naukri Profile Update Automation', () => {
 
     test.use({
         userAgent: 'ua',
-        storageState : 'Config/Login.json'
+        //storageState : 'Config/Login.json'
     });
 
 
@@ -38,10 +38,10 @@ test.describe('Naukri Profile Update Automation', () => {
        
 
         await naukripage.launchHomepage();
-        //await naukripage.ClickOnLoginOption();
-       // await naukripage.EnterEmail('erakki27@gmail.com');
-       // await naukripage.Enterpwd('Star@27a');
-       // await naukripage.ClickOnLogin();
+        await naukripage.ClickOnLoginOption();
+       await naukripage.EnterEmail('erakki27@gmail.com');
+       await naukripage.Enterpwd('Star@27a');
+       await naukripage.ClickOnLogin();
         await naukripage.ClickOnProfile();
         await naukripage.ClickonEdit();
         await naukripage.SaveProfile();
