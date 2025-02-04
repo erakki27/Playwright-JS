@@ -29,8 +29,7 @@ module.exports = defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
    // ignoreHTTPSErrors: true,
     //bypassCSP: true,
-    //headless: false,
-    launchOptions: { args: ['--headless=chromium']},
+    headless: false,
     
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -40,12 +39,12 @@ module.exports = defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'],
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'],
         screenshot : 'on',
-        //launchOptions: {args: ['--disable-web-security'], }
-      },
-    },
+}
+    }
+
     /*{
       name: 'webkit',
       use: { ...devices['Desktop Safari'],
