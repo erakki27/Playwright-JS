@@ -1,5 +1,5 @@
-const {test, expect} = require('@playwright/test');
-exports.HomePage = class HomePage {
+import {test, expect} from '@playwright/test'
+ class HomePage {
 
     constructor(page){
         this.page = page;
@@ -28,3 +28,4 @@ exports.HomePage = class HomePage {
     }
 
 }
+export default HomePage;

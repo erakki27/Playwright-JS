@@ -1,7 +1,7 @@
-const { HomePage } = require("./HomePage.page")
-const { ProductPage } = require("./ProductsPage.page")
-const { NaukariPage } = require("./NaukariPage.page")
-const {LinkedinPage} = require("./LinkedinPage.page")
+import HomePage from "./HomePage.page.js"
+import ProductPage from "./ProductsPage.page.js"
+import NaukariPage from "./NaukariPage.page.js"
+import LinkedinPage from"./LinkedinPage.page.js"
 
 class POManager{
     constructor(page)
@@ -30,4 +30,4 @@ class POManager{
     }
 }
 
-module.exports = {POManager};
+export default POManager;

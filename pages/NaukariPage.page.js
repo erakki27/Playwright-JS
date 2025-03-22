@@ -1,5 +1,5 @@
-const {test, expect} = require('@playwright/test');
-exports.NaukariPage = class NaukariPage {
+import {test, expect} from '@playwright/test'
+class NaukariPage {
 
     constructor(page){
         this.page = page;
@@ -42,4 +42,30 @@ exports.NaukariPage = class NaukariPage {
     async CheckUpdateDay(){
         await expect(this.page.locator('.mod-date')).toContainText('Today');
     }
+
+    async GoogleSignOp(){
+        const [pagePromise] = await Promise.all([this.page.waitForEvent('popup'),
+        await this.page.locator('div[class="google"] span').click()
+        ])
+        await pagePromise.waitForLoadState();
+        return new NaukariPage(pagePromise);
+    }
+
+    async googleEmail(email){
+        await this.page.locator('#identifierId').fill(email);
+    }
+
+    async emailNext(){
+        await this.page.locator('#identifierNext').click();
+    }
+
+    async googlepwd(pwd){
+        await this.page.locator('input[type="password"]').fill(pwd);
+    }
+
+    async pwdNext(){
+        await this.page('#passwordNext').click();
+    }
 }
+
+export default NaukariPage;

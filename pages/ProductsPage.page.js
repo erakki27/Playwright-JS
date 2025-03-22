@@ -1,4 +1,4 @@
-exports.ProductPage = class ProductPage{
+ class ProductPage{
 
     constructor(page){
         this.page = page;
@@ -26,3 +26,5 @@ exports.ProductPage = class ProductPage{
     }
 
 }
+
+export default ProductPage;
