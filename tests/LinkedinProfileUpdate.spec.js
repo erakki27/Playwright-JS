@@ -1,5 +1,5 @@
-const { test, expect } = require('@playwright/test');
-import {POManager} from '../pages/POManager.page';
+import {test, expect} from '@playwright/test'
+import POManager from '../pages/POManager.page.js';
 
 test.describe('Linkedin Profile Update Automation', () => {
     test.skip('Update',  async({ page }) =>{
@@ -34,9 +34,9 @@ test.describe('Linkedin Profile Update Automation', () => {
 
         await linkedinPage.launchHomepage();
         await linkedinPage.ClickOnSigninoption();
-        await linkedinPage.EnterEmail('erakki27@gmail.com');
-        await linkedinPage.EnterPwd('Shutup@27a');
-        await linkedinPage.ClickOnSignin();
+        //await linkedinPage.EnterEmail('**********');
+       // await linkedinPage.EnterPwd('S*********');
+       // await linkedinPage.ClickOnSignin();
         await linkedinPage.ClickOnProfile();
         await linkedinPage.ClickOnedit();
         await linkedinPage.SaveProfile();

@@ -1,5 +1,5 @@
-const {test, expect} = require('@playwright/test');
-exports.LinkedinPage = class LinkedinPage {
+import {test, expect} from '@playwright/test'
+ class LinkedinPage {
 
     constructor(page){
         this.page = page;
@@ -43,3 +43,5 @@ exports.LinkedinPage = class LinkedinPage {
         await expect(this.page.locator('p[class="artdeco-toast-item__message"] span')).toContainText('Save was successful.');
     }
 }
+
+export default LinkedinPage;

@@ -1,5 +1,5 @@
-const {test, expect} = require('@playwright/test');
-exports.NaukariPage = class NaukariPage {
+import {test, expect} from '@playwright/test'
+class NaukariPage {
 
     constructor(page){
         this.page = page;
@@ -67,3 +67,5 @@ exports.NaukariPage = class NaukariPage {
         await this.page('#passwordNext').click();
     }
 }
+
+export default NaukariPage;
