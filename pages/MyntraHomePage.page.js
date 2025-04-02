@@ -24,7 +24,7 @@ class MyntraHomePage{
         const page1Promise = this.page.waitForEvent('popup');
         await this.page.getByRole('link', { name: 'SASSAFRAS BASICS Self Design' }).click();
         const page1 = await page1Promise;
-        await page1.getByRole('button', { name: 'S Rs. 1025' }).click();
+        await page1.locator('//p[@class="size-buttons-unified-size" and contains(text(),"M")]').click();
         await page1.getByText('ADD TO BAG').click();
 
     }

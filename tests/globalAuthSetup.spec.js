@@ -1,6 +1,6 @@
 import { page, Browser, chromium, expect , test} from '@playwright/test';
 import path from 'path';
-import {POManager} from '../pages/POManager.page';
+import POManager from '../pages/POManager.page.js';
 const authFile = "Config/Login.json";
 const authFileLinkedin = "Config/Linkedin.json";
 
@@ -8,8 +8,8 @@ const authFileLinkedin = "Config/Linkedin.json";
 
     await page.goto('https://www.naukri.com/');
     await page.locator('#login_Layer').click();
-    await page.locator('input[placeholder="Enter your active Email ID / Username"]').fill('erakki27@gmail.com');
-    await page.locator('input[placeholder="Enter your password"]').fill('Star@27a');
+    await page.locator('input[placeholder="Enter your active Email ID / Username"]').fill('erakki2@gmail.com');
+    await page.locator('input[placeholder="Enter your password"]').fill('Sta@27a');
     await page.locator('button[type="submit"]').click();
 
     await page.waitForLoadState("networkidle");
@@ -25,8 +25,8 @@ const authFileLinkedin = "Config/Linkedin.json";
 
         await linkedinPage.launchHomepage();
         await linkedinPage.ClickOnSigninoption();
-        await linkedinPage.EnterEmail('erakki27@gmail.com');
-        await linkedinPage.EnterPwd('Shutup@27a');
+        await linkedinPage.EnterEmail('erakki2@gmail.com');
+        await linkedinPage.EnterPwd('Shuup@27a');
         await linkedinPage.ClickOnSignin();
 
         //await page.waitForLoadState("networkidle");
