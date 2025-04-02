@@ -39,8 +39,8 @@ module.exports = defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'],
+      name: 'chrome',
+      use: { ...devices['Desktop Chrome'],
         screenshot : 'on',
 }
     }
